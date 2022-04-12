@@ -16,6 +16,7 @@ model User {
   createAt  DateTime   @default(now())
   updateAt  DateTime   @updatedAt
   email     String     @unique
+  password  String
   playlists Playlist[]
 }
 
@@ -45,6 +46,6 @@ model Playlist {
   updateAt DateTime @updatedAt
   name     String
   songs    Song[]
-  User     User     @relation(fields: [userId], references: [id])
+  user     User     @relation(fields: [userId], references: [id])
   userId   Int
 }
