@@ -15,7 +15,7 @@ const PlayerLayout = ({ children }) => {
         <Sidebar />
       </Box>
       <Box marginLeft="250px" backgroundColor="red.300">
-        {children}
+        <Box height="calc(100vh - 100px)">{children}</Box>
       </Box>
       <Box position="absolute" bottom="0" left="0" backgroundColor="red.500">
         Player
